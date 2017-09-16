@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     //this is declaring of variables. like we do in C/C++ int a, int b etc
     //what is private ? its access-modifier can be public or protected also
+    //this is also Global Declaration of variables as you know
     private ListView listViewWishes;
     private String messageForEditText;
     private TextView textView;
@@ -22,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         //set the layout for our Java file
         setContentView(R.layout.activity_main);
+        
+        //Example of Local Decalartion of Variables
+        private String exampleLocalDeclaration;
 
         //init Views
         //this stands for initializing of various Views. Links XML to Java basically

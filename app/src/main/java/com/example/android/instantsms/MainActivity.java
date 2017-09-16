@@ -11,13 +11,15 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    private ListView listViewWishes;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ListView listViewWishes = (ListView) findViewById(R.id.ListView);
+        listViewWishes = (ListView) findViewById(R.id.ListView);
+        
         final ArrayAdapter<CharSequence> adapterWishes = ArrayAdapter.createFromResource(this,
                 R.array.wishes,
                 android.R.layout.simple_list_item_1);

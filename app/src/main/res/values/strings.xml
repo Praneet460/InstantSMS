@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">InstantSMS</string>
+    `
+    <string name="good_morning">Good Morning</string>
+    <string name="good_afternoon">Good Afternoon</string>
+    <string name="good_evening">Good Evening</string>
+    <string name="good_night">Good Night</string>
+    <string name="thank_you">Thank You</string>
+    <string name="toastMessage" />
+
+    <string-array name="wishes">
+        <item>@string/good_morning</item>
+        <item>@string/good_afternoon</item>
+        <item>@string/good_evening</item>
+        <item>@string/good_night</item>
+        <item>@string/thank_you</item>
+    </string-array>
+
+</resources>

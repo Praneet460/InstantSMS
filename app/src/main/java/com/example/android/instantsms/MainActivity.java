@@ -11,6 +11,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    //this is declaring of variables. like we do in C/C++ int a, int b etc
+    //what is private ? its access-modifier can be public or protected also
     private ListView listViewWishes;
     private String messageForEditText;
     private TextView textView;
@@ -18,22 +20,29 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //set the layout for our Java file
         setContentView(R.layout.activity_main);
 
+        //init Views
+        //this stands for initializing of various Views. Links XML to Java basically
         listViewWishes = (ListView) findViewById(R.id.ListView);
         textView = (TextView) findViewById(R.id.et1);
         
+        //here we set an ArrayAdapter to inflate(to fill) our ListView
         final ArrayAdapter<CharSequence> adapterWishes = ArrayAdapter.createFromResource(this,
                 R.array.wishes,
                 android.R.layout.simple_list_item_1);
         listViewWishes.setAdapter(adapterWishes);
 
+        //this is as you the click listener for out List
+        //for click on Send Button same needs to be done
         listViewWishes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                 
-                //see we use the int position to get the corresponding item . Tell if this works
+                //using the getItemAtPosition method we get to know which item is clicked!
                 messageForEditText = listViewWishes.getItemAtPosition(position).toString();
+                //then we set the corresponding message to our EditText.
                 textView.setText(messageForEditText);
             
             }
